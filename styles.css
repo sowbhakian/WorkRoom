@@ -1,0 +1,87 @@
+/* main page */
+
+#card-section {
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    /* background-color: #008c8c; */
+    padding: 3% 0;
+}
+
+.card-body {
+    border-radius: 5rem;
+    box-shadow: 2px 2px 10px #888888;
+    /* background-color: #63bfdb; */
+    /* background-color: aquamarine; */
+    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+}
+
+.head {
+    margin-top: 3%;
+    text-align: center;
+    /* color: aliceblue; */
+}
+
+.card-body:hover {
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.card {
+    border-radius: 20rem;
+    margin: 2% 5%;
+}
+
+.events {
+    display: inline;
+    margin: 0 2%;
+    line-height: 18vh;
+}
+
+.icons {
+    background-color: rgb(71, 71, 71);
+    padding: 4% 4%;
+    color: white;
+    border-radius: 50%;
+    display: inline;
+    margin: 0 2%;
+}
+
+.icons:hover {
+    background-color: black;
+}
+
+.event-whole {
+    padding: 1% 15%;
+    cursor: pointer;
+}
+
+
+/* ----------------------------------------------------- */
+
+
+/* index page */
+
+#index-backgn {
+    height: 100%;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    padding: 3% 0;
+    padding-bottom: 5%;
+}
+
+.in_heading {
+    padding: 3% 10%;
+    text-align: center;
+}
+
+.in_heading2 {
+    padding: 2% 21%;
+    text-align: justify;
+}
+
+.in_btn {
+    text-align: center;
+}
+
+.signin-btn,
+.signup-btn {
+    margin: 1% 1%;
+    padding: 1.3% 5%;
+}

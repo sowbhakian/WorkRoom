@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+
+    <!-- Font Awesome CSS -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+
+    <!-- styles sheet -->
+    <link rel="stylesheet" href="styles.css">
+    <title>WorkRoom</title>
+</head>
+
+<body>
+
+
+    <section>
+
+        <div class="container-fluid">
+
+            <!-- top heading -->
+            <section>
+                <h1 class="head">Work Room</h1>
+            </section>
+            <hr>
+        </div>
+
+        <!--index.html -->
+        <div id="index-backgn">
+            <div class="container ">
+                <div class="heading">
+                    <h1 class="in_heading">WHERE TEACHING AND LEARNING COME TOGETHER</h1>
+                    <p class="in_heading2">Google Classroom is your all-in-one place for teaching and learning. Our easy-to-use and secure tool helps educators manage,measure,and enrich learning experiences</p>
+                    <div class="in_btn">
+                        <button type="button" class="btn btn-primary signin-btn" data-toggle="modal" data-target="#signin-Modal">Sign-in</button>
+                        <button type="button" class="btn btn-outline-primary signup-btn" data-toggle="modal" data-target="#signup-Modal">Sign-up</button>
+                    </div>
+                </div>
+            </div>
+            <article>
+                <!--Sign-in-->
+                <div class="modal fade" id="signin-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header border-bottom-0">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-title text-center">
+                                    <h4>Sign-in</h4>
+                                </div>
+                                <div class="d-flex flex-column text-center">
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="email1" placeholder="Your email address...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                                        </div>
+                                        <button type="button" class="btn btn-info btn-block btn-round">Sign-in</button>
+                                    </form>
+
+                                    <div class="text-center text-muted delimiter">or Sign-in with Google</div>
+                                    <div class="d-flex justify-content-center social-buttons">
+
+                                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Google">
+                                            <i class="fab fa-google"></i>
+                
+            
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <div class="signup-section">Not a member yet? <a href="#signup-Modal" class="text-info"> Sign Up</a>.</div>
+                            </div>
+                        </div>
+                    </div>            
+                <!-- /sign-in --> 
+            </div>
+            </article>
+
+            <article>
+        <div class="modal fade" id="signup-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-title text-center">
+                                            <h4>Sign-up</h4>
+                                        </div>
+                                        <div class="d-flex flex-column text-center">
+                                            <form>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" id="email1" placeholder="Your email address...">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                                                </div>
+                                                <button type="button" class="btn btn-info btn-block btn-round">Sign-up</button>
+                                            </form>
+
+                                            <div class="text-center text-muted delimiter">or Sign-in with Google</div>
+                                            <div class="d-flex justify-content-center social-buttons">
+
+                                                <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Google">
+                        <i class="fab fa-google"></i>
+                    
+                
+                </div>
+                </div>
+            </div>
+                <div class="modal-footer d-flex justify-content-center">
+                <div class="signup-section">Already a member? <a href="#signin-Modal" class="text-info"> Sign In</a>.</div>
+                </div>
+            </div>
+        </div>
+
+            </article>
+        </div>
+
+    </section>
+
+
+ 
+ 
+  <!-- jQuery --> 
+  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+  <!-- Popper JS -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+  <!-- Bootstrap JS -->
+  <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+   <!-- Custom Script -->      
+  <script  src="js/script.js"></script>
+  
+  </body>
+</html>
