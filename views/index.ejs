@@ -11,17 +11,24 @@
     <!-- Font Awesome CSS -->
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
 
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Klee+One:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=Klee+One:wght@600&display=swap" rel="stylesheet">
+
     <!-- styles sheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>WorkRoom</title>
 </head>
 
 <body>
 
 
-    <section>
+    <section id="whole-section-index">
 
-        <div class="container-fluid">
+        <div class="container-fluid ">
 
             <!-- top heading -->
             <section>
@@ -37,8 +44,8 @@
                     <h1 class="in_heading">WHERE TEACHING AND LEARNING COME TOGETHER</h1>
                     <p class="in_heading2">Google Classroom is your all-in-one place for teaching and learning. Our easy-to-use and secure tool helps educators manage,measure,and enrich learning experiences</p>
                     <div class="in_btn">
-                        <button type="button" class="btn btn-primary signin-btn" data-toggle="modal" data-target="#signin-Modal">Sign-in</button>
-                        <button type="button" class="btn btn-outline-primary signup-btn" data-toggle="modal" data-target="#signup-Modal">Sign-up</button>
+                        <button type="button" class="btn btn-info signin-btn" data-toggle="modal" data-target="#signin-Modal">Sign-in</button>
+                        <button type="button" class="btn btn-outline-info text-light signup-btn" data-toggle="modal" data-target="#signup-Modal">Sign-up</button>
                     </div>
                 </div>
             </div>
@@ -72,13 +79,12 @@
 
                                         <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Google">
                                             <i class="fab fa-google"></i>
-                
-            
+        
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer d-flex justify-content-center">
-                                <div class="signup-section">Not a member yet? <a href="#signup-Modal" class="text-info"> Sign Up</a>.</div>
+                                <div class="signup-section">Not a member yet? <a data-toggle="modal" data-target="#signup-Modal" class="text-info" data-dismiss="modal" href="#signup-Modal"> Sign-Up</a></div>
                             </div>
                         </div>
                     </div>            
@@ -121,7 +127,7 @@
                 </div>
             </div>
                 <div class="modal-footer d-flex justify-content-center">
-                <div class="signup-section">Already a member? <a href="#signin-Modal" class="text-info"> Sign In</a>.</div>
+                    <div class="signup-section">Already a member? <a data-toggle="modal" data-target="#signin-Modal" class="text-info" data-dismiss="modal" href="#signup-Modal"> Sign-In</a></div>
                 </div>
             </div>
         </div>
