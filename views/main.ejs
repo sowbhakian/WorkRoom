@@ -25,6 +25,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=Klee+One:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Changa:wght@300&family=Fredoka+One&family=Klee+One:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Changa:wght@300&family=Fredoka+One&family=Klee+One:wght@600&family=Trocchi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:ital@1&family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Oleo+Script&display=swap" rel="stylesheet">
 
     <!-- bootstrap links -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -45,6 +49,9 @@
             <h1 class="head">Work Room</h1>
         </section>
         <div class="text-right">
+            <p class="usermailid">
+                <%=usermailid%>
+            </p>
             <button type="button" class="btn btn-outline-light code-btn" data-toggle="modal" data-target="#code_popup">WorkRoom Code</button>
         </div>
         <hr>
@@ -55,20 +62,28 @@
                     <div class="event-whole">
                         <div class="row">
                             <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3  pair">
-                                <i class="icons fas fa-tasks fa-2x text"></i>
+                                <button class="icons">
+                                <i class=" fas fa-tasks fa-2x text"></i>                                
+                                </button>
                                 <p class="events">To-Do</p>
                             </div>
                             <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 pair">
-                                <i class="icons fas fa-calendar-alt fa-2x"></i>
-                                <p class="events">Time Table</p>
+                                <form action="/calender" method="post">
+                                    <button class="icons" type="submit">
+                                    <i class=" fas fa-calendar-alt fa-2x"></i></button>
+                                    <p class="events">Time Table</p>
+                                </form>
                             </div>
                             <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 pair">
-                                <i class="icons fas fa-file-alt fa-2x"></i>
+                                <button class="icons">
+                                <i class="fas fa-file-alt fa-2x"></i></button>
                                 <p class="events">
                                     </i>Test</p>
                             </div>
                             <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 pair">
-                                <i class="icons fas fa-plus fa-2x" data-toggle="modal" data-target="#join_popup"></i>
+                                <button class="icons">                                    
+                                <i class="fas fa-plus fa-2x" data-toggle="modal" data-target="#join_popup"></i>
+                            </button>
                                 <p class="events">Join</p>
                             </div>
                         </div>
@@ -78,20 +93,29 @@
 
                 <!-- adding -->
                 <section>
-                    <% if(names.length !=0){%>
+                    <% if(listname.length !=0){%>
                         <div class="row">
                             <% listname.forEach((i)=>{%>
-                                <div class="col-sm-6 col-xs-6">
+                                <div class="col-sm-4 col-xs-4">
                                     <div class="card">
                                         <div class="card-body text-center">
-                                            <h5 class="card-title ">
+
+                                            <form action="/remove" method="POST">
+                                                <div class="minus-div">
+                                                    <input name="minus" value="<%= i[1]%>" class="hide">
+                                                    <button type="submit" class="btn btn-outline-light minus"><i class="fas fa-minus-circle"></i></button>
+                                                </div>
+                                            </form>
+
+                                            <h5 class="card-title staff-name">
                                                 <%= i[0] %>
                                             </h5>
                                             <hr>
-                                            <p class="card-text">
+                                            <p class="card-text subject-name">
                                                 <%= i[1]%>
                                             </p>
-                                            <a href="#" class="btn btn-primary ">Assignments</a>
+                                            <a href="#" class="btn btn-info font-btn">Assignments</a>
+
 
                                         </div>
                                     </div>
@@ -144,18 +168,16 @@
                             <div class="d-flex flex-column text-center">
                                 <form>
                                     <div class="form-group">
-                                        <h1>Available codes</h1>
+                                        <h2>Available codes</h2>
                                         <dl>
-                                            <dt>English</dt>
-                                            <dd>- eng123</dd>
-                                            <dt>Maths</dt>
-                                            <dd>- maths123</dd>
-                                            <dt>Physics</dt>
-                                            <dd>- phy123</dd>
-                                            <dt>Chemistry</dt>
-                                            <dd>- che123</dd>
-                                            <dt>Biology</dt>
-                                            <dd>- bio123</dd>
+                                            <p class="headpop">Subject - code</p>
+                                            <p class="code-pop">English - eng123</p>
+                                            <p class="code-pop">Maths - maths123</p>
+                                            <p class="code-pop">Physics - phy123</p>
+                                            <p class="code-pop">Chemistry - che123</p>
+                                            <p class="code-pop">Biology - bio123</p>
+                                            <hr>
+                                            <p class="code-pop">Don't Enter Wrong Code ! </p>
                                         </dl>
                                     </div>
                                 </form>
@@ -169,7 +191,7 @@
     </div>
 
 
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
     <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
